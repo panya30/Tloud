@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'IBM Plex Sans Thai', 'IBM Plex Sans', system-ui, sans-serif;
+  --font-display: 'IBM Plex Sans Thai', 'IBM Plex Sans', system-ui, sans-serif;
+
+  --color-brand: #0066FF;
+  --color-brand-light: #E8F0FE;
+  --color-brand-dark: #0052CC;
+  --color-surface: #FAFBFC;
+  --color-surface-dark: #0A0A0A;
+  --color-text: #111111;
+  --color-text-muted: #666666;
+  --color-text-light: #999999;
+  --color-border: #E5E7EB;
+  --color-green: #00C853;
+  --color-green-light: #E8F8EE;
+}
+
+@layer base {
+  * { -webkit-font-smoothing: antialiased; }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  ::selection {
+    background: var(--color-brand);
+    color: white;
+  }
+}
+
+@keyframes float-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+@keyframes count-messages {
+  0% { content: "0"; }
+  20% { content: "48"; }
+  40% { content: "127"; }
+  60% { content: "286"; }
+  80% { content: "412"; }
+  100% { content: "547"; }
+}
+
+.animate-float-up {
+  animation: float-up 0.6s ease-out both;
+}
+
+.animate-float-up-1 { animation-delay: 0.1s; }
+.animate-float-up-2 { animation-delay: 0.2s; }
+.animate-float-up-3 { animation-delay: 0.3s; }
+.animate-float-up-4 { animation-delay: 0.4s; }
+.animate-float-up-5 { animation-delay: 0.5s; }
+
+.animate-pulse-dot {
+  animation: pulse-dot 2s ease-in-out infinite;
+}
